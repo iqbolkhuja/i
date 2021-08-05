@@ -14,11 +14,13 @@
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
                         this.vid.play();
+                         document.getElementById("knopka").style.display = "block";
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
                         this.toggle = false;
                         this.vid.pause();
+                         document.getElementById("knopka").style.display = "none";
                     }.bind(this));
                 },
             });
@@ -29,7 +31,7 @@
           // here you can change also a-scene or a-entity properties, like
           // changing your 3D model source, size, position and so on
           // or you can just open links, trigger actions...
-                      document.getElementById("knopka").style.display = "none";
+                     
 
           alert("Hi there!");
         });
